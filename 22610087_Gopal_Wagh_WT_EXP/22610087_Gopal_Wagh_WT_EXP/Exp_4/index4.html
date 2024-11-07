@@ -1,0 +1,75 @@
+<!-- Experiment 5
+Program on CSS properties for HTML web page. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Properties Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Webpage</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi! I'm a B.Tech IT student with a passion for technology and innovation. I enjoy learning about new programming languages and frameworks.</p>
+            <p>I am currently focusing on web development, data structures, and algorithms, and I aim to enhance my skills in software engineering.</p>
+        </section>
+        
+        <section id="projects">
+            <h2>My Projects</h2>
+            <ul>
+                <li>Portfolio Website: A personal portfolio to showcase my work.</li>
+                <li>Task Manager: A web app for managing daily tasks using React.</li>
+                <li>E-commerce Site: Developed a full-stack e-commerce application using Node.js and MongoDB.</li>
+            </ul>
+        </section>
+        
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>In my free time, I enjoy:</p>
+            <ul>
+                <li>Reading tech blogs and books</li>
+                <li>Playing video games</li>
+                <li>Cycling and hiking</li>
+                <li>Participating in hackathons</li>
+                <li>Exploring new cuisines and cooking</li>
+            </ul>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Description:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 My Webpage. All rights reserved.</p>
+    </footer>
+</body>
+</html>

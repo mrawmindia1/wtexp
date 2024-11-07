@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Advanced Layout Example</title>
+        <style>
+            /* Basic Reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* Body Styling */
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                background-color: #f4f4f4;
+            }
+
+            /* Header */
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+            }
+
+            /* Navigation Bar */
+            nav {
+                background-color: #555;
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+            }
+
+            nav a {
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px 15px;
+                margin: 0 10px;
+                border-radius: 4px;
+                transition: background-color 0.3s;
+            }
+
+            nav a:hover {
+                background-color: #777;
+            }
+
+            /* Main Content */
+            main {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            /* Section */
+            section {
+                background-color: #ffffff;
+                margin-bottom: 20px;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Footer */
+            footer {
+                background-color: #333;
+                color: #ffffff;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <h1>Advanced Layout Example</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Section 1 -->
+            <section>
+                <h2>Welcome to Our Website</h2>
+                <p>
+                    This is a simple example demonstrating how to use HTML
+                    layout tags effectively.
+                </p>
+                <p>
+                    Utilizing layout-specific elements helps to create a
+                    semantic structure that is better for SEO and accessibility.
+                </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section>
+                <h2>Our Services</h2>
+                <ul>
+                    <li>Web Development</li>
+                    <li>Graphic Design</li>
+                    <li>SEO Optimization</li>
+                    <li>Content Creation</li>
+                </ul>
+            </section>
+
+            <!-- Section 3 -->
+            <section>
+                <h2>Contact Us</h2>
+                <p>If you have any questions, feel free to reach out!</p>
+                <form>
+                    <label for="name">Name:</label><br />
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                    /><br /><br />
+                    <label for="email">Email:</label><br />
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    /><br /><br />
+                    <input type="submit" value="Submit" />
+                </form>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Advanced Layout Example. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

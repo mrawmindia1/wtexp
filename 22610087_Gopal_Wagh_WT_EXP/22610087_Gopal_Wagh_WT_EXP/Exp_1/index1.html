@@ -1,0 +1,114 @@
+<!-- Exp 1 -->
+<!-- Program on HTML basic tags for text formatting. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Text Formatting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: blue; 
+            background-color: yellow;
+        }
+        h2 {
+            color: red; 
+            /* background-color: yellow; */
+        }
+        p {
+            margin-bottom: 20px; 
+        }
+        b, i, u, strike, sub, sup {
+            display: block;
+            margin: 5px 0; 
+        }
+        .red-text {
+            color: red; 
+        }
+        .large-text {
+            font-size: 2em; 
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Merge table borders */
+        }
+        th, td {
+            border: 1px solid #ccc; /* Add border to cells */
+            padding: 10px; /* Add padding for cell content */
+            text-align: left; /* Align text to the left */
+        }
+        th {
+            background-color: #f4f4f4; /* Light gray background for header */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Zebra striping for even rows */
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph of text.</p>
+    <hr>
+    <ul>
+        <li><b>This text will be bold.</b></li>
+        <li><i>This text will be italic.</i></li>
+        <li><u>This text will be underlined.</u></li>
+        <li><strike>This text will be struck through.</strike></li>
+        <li><sub>This text will be subscript.</sub></li>
+        <li><sup>This text will be superscript.</sup></li>
+    </ul>
+    <hr>
+    <span class="red-text">This text will be red.</span>
+    <br>
+    <span class="large-text">This text will be large.</span>
+    <hr>
+    <h2>Items in Stock</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sr No.</th>
+                <th>Name</th>
+                <th>Qty</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Item A</td>
+                <td>10</td>
+                <td>$15.00</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Item B</td>
+                <td>20</td>
+                <td>$25.00</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Item C</td>
+                <td>15</td>
+                <td>$35.00</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Item D</td>
+                <td>8</td>
+                <td>$20.00</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Item E</td>
+                <td>5</td>
+                <td>$10.00</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

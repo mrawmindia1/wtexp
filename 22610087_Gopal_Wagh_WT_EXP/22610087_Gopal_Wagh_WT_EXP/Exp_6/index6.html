@@ -1,0 +1,258 @@
+<!-- Experiment 6
+Program on applying layout to HTML web page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Solutions - Your Partner for Success</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #007bff;
+        }
+
+        p {
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header .tagline {
+            font-size: 1.2rem;
+            color: #eee;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            background-color: #0064cc;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1527629160311-ebacb2972307') no-repeat center center/cover;
+            color: white;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 15px 0 0;
+        }
+
+        .cta-btn {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #ff3b29;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 3;
+            padding: 20px;
+            background-color: #fff;
+            margin-right: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .main-content h2 {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-left: 5px solid #007bff;
+        }
+
+        .main-content p {
+            line-height: 1.8;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            padding: 10px;
+            display: block;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .main-content {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Innovative Solutions</h1>
+        <p class="tagline">Empowering Businesses to Achieve More</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 style="color: black;">Unlock Your Business Potential</h1>
+        <p style="color: black;">We provide cutting-edge solutions to help you grow and succeed.</p>
+        <a href="#services" class="cta-btn">Discover Our Services</a>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <h2>Welcome to Innovative Solutions</h2>
+            <p>At Innovative Solutions, we believe in transforming ideas into reality through technology. Whether you're a startup looking to establish your online presence or an established company aiming to optimize your processes, we have the tools and expertise to help you reach your goals.</p>
+
+            <h2 id="services">Our Key Services</h2>
+            <p><strong>Web Development:</strong> We create beautiful, responsive, and user-friendly websites tailored to your business needs. Our team ensures that your website is fast, secure, and optimized for search engines.</p>
+            <p><strong>Business Consulting:</strong> We offer expert advice on business strategies, helping you make data-driven decisions and improve operational efficiency. Our solutions are customized to fit your business objectives.</p>
+            <p><strong>Cloud Solutions:</strong> Leverage the power of the cloud to enhance your business operations. We offer scalable, secure cloud solutions that allow you to store, manage, and access your data from anywhere, at any time.</p>
+
+            <h2>Our Clients</h2>
+            <p>We’ve worked with a range of clients from various industries, including healthcare, finance, e-commerce, and education. Our commitment to quality and client satisfaction is what sets us apart.</p>
+        </div>
+
+        <!-- Sidebar Area -->
+        <aside class="sidebar">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#">Client Testimonials</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Innovative Solutions | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

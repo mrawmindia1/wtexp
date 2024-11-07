@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Multimedia Elements in HTML</title>
+    </head>
+    <body>
+        <h1>Handling Multimedia Elements in HTML</h1>
+
+        <!-- Image Element -->
+        <h2>Image</h2>
+        <p>To display an image, use the <code>&lt;img&gt;</code> tag:</p>
+        <img
+            src="https://via.placeholder.com/300"
+            alt="Sample Image"
+            width="300"
+        />
+
+        <!-- Audio Element -->
+        <h2>Audio</h2>
+        <p>To embed audio, use the <code>&lt;audio&gt;</code> tag:</p>
+        <audio controls>
+            <source src="sample-audio.mp3" type="audio/mp3" />
+            <source src="sample-audio.ogg" type="audio/ogg" />
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Video Element -->
+        <h2>Video</h2>
+        <p>To embed video, use the <code>&lt;video&gt;</code> tag:</p>
+        <video width="320" height="240" controls>
+            <source src="sample-video.mp4" type="video/mp4" />
+            <source src="sample-video.ogg" type="video/ogg" />
+            Your browser does not support the video element.
+        </video>
+
+        <!-- Iframe Element -->
+        <h2>Iframe (Embedded Content)</h2>
+        <p>
+            To embed content from other websites, like YouTube videos, use the
+            <code>&lt;iframe&gt;</code> tag:
+        </p>
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+    </body>
+</html>

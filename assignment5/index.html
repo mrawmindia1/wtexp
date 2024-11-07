@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>JavaScript Event Handling Examples</title>
+        <style>
+            .container {
+                margin: 20px;
+                padding: 20px;
+                border: 1px solid #ccc;
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: #3498db;
+                margin: 10px;
+                transition: all 0.3s;
+            }
+            .highlight {
+                background-color: #e74c3c;
+            }
+            .form-group {
+                margin: 15px 0;
+            }
+            #coordinates {
+                margin-top: 10px;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>JavaScript Event Handling Examples</h1>
+
+            <section>
+                <h2>Mouse Events</h2>
+                <div id="mouseEventBox" class="box">Mouse Events Box</div>
+                <p id="coordinates">Mouse coordinates:</p>
+            </section>
+
+            <section>
+                <h2>Keyboard Events</h2>
+                <div class="form-group">
+                    <label for="keyboardInput">Type something:</label>
+                    <input type="text" id="keyboardInput" />
+                    <p id="keyboardOutput">Pressed key:</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Form Events</h2>
+                <form id="sampleForm">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required />
+                    </div>
+                    <button type="submit">Submit Form</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>Window Events</h2>
+                <div id="scrollInfo">Scroll the page to see the effect</div>
+            </section>
+        </div>
+
+        <script>
+            const mouseEventBox = document.getElementById("mouseEventBox");
+            const coordinates = document.getElementById("coordinates");
+
+            mouseEventBox.addEventListener("click", function (e) {
+                this.classList.toggle("highlight");
+            });
+
+            mouseEventBox.addEventListener("mouseover", function () {
+                this.style.cursor = "pointer";
+                this.style.transform = "scale(1.1)";
+            });
+
+            mouseEventBox.addEventListener("mouseout", function () {
+                this.style.transform = "scale(1)";
+            });
+
+            document.addEventListener("mousemove", function (e) {
+                coordinates.textContent = `Mouse coordinates: X: ${e.clientX}, Y: ${e.clientY}`;
+            });
+
+            const keyboardInput = document.getElementById("keyboardInput");
+            const keyboardOutput = document.getElementById("keyboardOutput");
+
+            keyboardInput.addEventListener("keydown", function (e) {
+                keyboardOutput.textContent = `Pressed key: ${e.key} (Code: ${e.keyCode})`;
+            });
+
+            keyboardInput.addEventListener("keyup", function (e) {
+                if (e.key === "Enter") {
+                    alert("Enter key pressed!");
+                }
+            });
+
+            const sampleForm = document.getElementById("sampleForm");
+            const usernameInput = document.getElementById("username");
+            const emailInput = document.getElementById("email");
+
+            sampleForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                alert(
+                    `Form submitted!\nUsername: ${usernameInput.value}\nEmail: ${emailInput.value}`
+                );
+            });
+
+            usernameInput.addEventListener("focus", function () {
+                this.style.backgroundColor = "#e8f0fe";
+            });
+
+            usernameInput.addEventListener("blur", function () {
+                this.style.backgroundColor = "";
+            });
+
+            emailInput.addEventListener("input", function () {
+                if (this.validity.valid) {
+                    this.style.borderColor = "green";
+                } else {
+                    this.style.borderColor = "red";
+                }
+            });
+
+            const scrollInfo = document.getElementById("scrollInfo");
+            let scrollTimeout;
+
+            window.addEventListener("scroll", function () {
+                scrollInfo.textContent = "Scrolling...";
+                scrollInfo.style.color = "red";
+
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(function () {
+                    scrollInfo.textContent =
+                        "Scroll the page to see the effect";
+                    scrollInfo.style.color = "black";
+                }, 500);
+            });
+
+            window.addEventListener("resize", function (e) {
+                console.log(
+                    `Window resized to: ${window.innerWidth}x${window.innerHeight}`
+                );
+            });
+
+            // Load Event
+            window.addEventListener("load", function () {
+                console.log("Page fully loaded!");
+            });
+
+            // Error Handling
+            window.addEventListener("error", function (e) {
+                console.error("An error occurred:", e.message);
+            });
+        </script>
+    </body>
+</html>

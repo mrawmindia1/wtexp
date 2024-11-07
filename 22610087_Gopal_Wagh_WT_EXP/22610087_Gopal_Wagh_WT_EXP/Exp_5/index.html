@@ -1,0 +1,50 @@
+<!-- Experiment 5
+Program on applying event handling on HTML web page using Java script. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Event Handling Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s;
+        }
+        button, input {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Handling Demo</h1>
+    
+    <button id="clickButton">Click Here</button>
+    <p id="clickMessage">Button not clicked yet.</p>
+    
+    <input type="text" id="textInput" placeholder="Type something and press Enter" />
+    <p id="keyMessage">Press Enter after typing in the box.</p>
+    
+    <form id="myForm">
+        <input type="text" id="formInput" placeholder="Submit this form" required />
+        <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
